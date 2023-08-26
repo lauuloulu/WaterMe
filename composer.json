@@ -1,0 +1,15 @@
+{
+    "name": "laura/water-me",
+    "autoload": {
+        "psr-4": {
+            "Laura\\WaterMe\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "lauuloulu",
+            "email": "lprsa18@gmail.com"
+        }
+    ],
+    "require": {}
+}

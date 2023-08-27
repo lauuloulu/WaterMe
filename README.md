@@ -40,9 +40,13 @@ Hay estudios que defienden la idea de que, hablar o cantar a las plantas, tiene 
 No hay una conclusión clara, ¡pero nunca está de más probarlo!
 ## Languages
 Html, Css, React, JavaScript, Php
-## Roadmap
 
-- Additional browser support
+## Sitios de interés
 
-- Add more integrations
+https://lauloulu.atlassian.net/browse/WMHP
 
+https://www.figma.com/file/CoSPHOjn1ccnPZaPD2R7Ek/Untitled?type=design&node-id=0%3A1&mode=design&t=ysg7P0f72095oRqI-1
+
+https://lucid.app/lucidchart/83eb075a-a1d0-4d88-9061-2a7346242d46/edit?page=0_0&invitationId=inv_6879fdc7-0bd4-464a-a4be-af287f12c620#
+
+https://drawsql.app/teams/lauuloulus-team/diagrams/water-me-happy-plants

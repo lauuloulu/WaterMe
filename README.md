@@ -1,66 +1,52 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Water Me; happy plants
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+¿Se te mueren las plantas y no sabes porqué?
 
-## About Laravel
+¿Pasan de estar verdes y radiantes a marrón 'morisión'?
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+¡Esta es tu aplicación! 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+(No hacemos las mejores rimas, pero sabemos cuidar plantas.)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+"Water Me" te ayuda a registrar las necesidades de tus plantas, recordándote cuando hay que regar cada una. 
 
-## Learning Laravel
+Lo único necesario es: 
+* Tipo de planta
+* Cada cuanto es recomendable el riego
+* Mililitros de cada toma
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Una vez entrados los datos, ¡te recordaremos regar según el tiempo estipulado y la cantidad!
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+## FAQ
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+#### ¿Cómo se usa la aplicación?
 
-## Contributing
+Normalmente cuando compras una panta, viene un cartelito con las necesidades de la planta (cantidad de luz, de agua y cada cuanto regar). 
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+La aplicación permite guardar esa información, además de indicarte los días de riego de cada una de ellas. ¡Funciona como un calendario de riego!
 
-## Code of Conduct
+#### ¿Cómo sé a qué planta toca regar?
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Puedes personalizar cada una de las estiquetas, con una imagen a elegir y un nombre. 
 
-## Security Vulnerabilities
+#### ¿Si les hablo a las plantas, crecerán más rápido? 
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Hay estudios que defienden la idea de que, hablar o cantar a las plantas, tiene un efecto positivo en ellas. Unos dicen que es por el dióxido de carbono que les echamos al hablar (ayuda en el proceso de fotosíntesis), mientras que otros creen que es por las vibraciones, capaces de ser percibidas por ellas. 
 
-## License
+No hay una conclusión clara, ¡pero nunca está de más probarlo!
+## Languages
+Html, Css, React, JavaScript, Php
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Sitios de interés
+
+https://lauloulu.atlassian.net/browse/WMHP
+
+https://www.figma.com/file/CoSPHOjn1ccnPZaPD2R7Ek/Untitled?type=design&node-id=0%3A1&mode=design&t=ysg7P0f72095oRqI-1
+
+https://lucid.app/lucidchart/83eb075a-a1d0-4d88-9061-2a7346242d46/edit?page=0_0&invitationId=inv_6879fdc7-0bd4-464a-a4be-af287f12c620#
+
+https://drawsql.app/teams/lauuloulus-team/diagrams/water-me-happy-plants

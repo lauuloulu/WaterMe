@@ -14,10 +14,9 @@ protected $primaryKey= "id_persona";
 protected $fillable= [
     "nombre_persona",
     "apellidos",
-    "correo",
-    "contraseña"
+    "correo"
 ];
 
-//protected $hidden= ["contraseña"]; 
+protected $hidden= ["contraseña"]; 
 
 }

@@ -25,15 +25,31 @@ class PlantaController extends Controller
 
     public function store(Request $request){
         $request->validate([
-            'id_tipo' => 'required',
             'estado' => 'required',
             'nombre_planta' => 'required',
             'cantidad_agua' => 'required',
             'riego' => 'required',
         ]);
-        
+    
+        $nombre_tipo = $request->input('nombre_tipo');
+    
+        if (!$nombre_tipo) {
+            $nuevo_nombre_tipo = $request->input('nuevo_nombre_tipo');
+    
+            if (!empty($nuevo_nombre_tipo)) {
+                $nuevoTipo = TipoPlanta::create([
+                    'nombre_tipo' => $nuevo_nombre_tipo,
+                ]);
+                $id_tipo = $nuevoTipo->id_tipo;
+            } else {
+            }
+        } else {
+            $tipoExistente = TipoPlanta::where('nombre_tipo', $nombre_tipo)->first();
+            $id_tipo = $tipoExistente->id_tipo;
+        }
+    
         Planta::create([
-            'id_tipo'=> $request->id_tipo,
+            'id_tipo'=> $id_tipo,
             'estado'=>$request->estado,
             'nombre_planta'=>$request->nombre_planta,
             'cantidad_agua'=>$request->cantidad_agua,
@@ -41,9 +57,8 @@ class PlantaController extends Controller
         ]);
         return redirect()->route('planta.index_planta');
     }
-
     public function edit(Planta $planta){
-        return view('usuario.plantas.editar_planta');
+        return view('usuario.plantas.editar_planta', compact('planta'));
     }
 
     public function update(Request $request, Planta $planta){

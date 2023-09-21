@@ -5,11 +5,11 @@
 @section('content')
 
 <a class="btn custom-btn" href="{{ route('planta.crear')}}">Nueva planta</a>
-<p>Esto es index_planta</p>
-
 
 @foreach ($plantas as $planta )
-<p>{{ $planta->nombre_planta }}</p>
-@endforeach
 
+<li><a href="#">{{ $planta->nombre_planta }}</a> | <a href="{{ route('planta.edit', ['planta'=> $planta->id_planta])}}">Editar</a> | <a href="{{ route('planta.delete', ['planta' => $planta->id_planta])}}">Borrar</a> </li>
+
+@endforeach
+<a class="btn custom-btn" href="{{ route('usuario.index')}}">Índice</a>
 @endsection

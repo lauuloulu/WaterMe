@@ -8,15 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Persona extends Model
 {
     //use HasFactory;
+public $timestamps = false;
 protected $table= "persona";
 protected $primaryKey= "id_persona";
 
 protected $fillable= [
     "nombre_persona",
     "apellidos",
-    "correo"
+    "correo",
+    "contraseña"
 ];
-
-protected $hidden= ["contraseña"]; 
 
 }

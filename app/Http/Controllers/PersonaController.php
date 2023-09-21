@@ -23,8 +23,14 @@ class PersonaController extends Controller
             'nombre_persona'=>$request->nombre_persona,
             'apellidos'=>$request->apellidos,
             'correo'=>$request->correo,
+            'contraseña'=>$request->contraseña,
         ]);
         return redirect()->route('usuario.index');
     }
+
+    public function edit(Persona $persona){
+        return view('usuario.plantas.editar_persona', compact ('persona'));
+    }
+
 
 }

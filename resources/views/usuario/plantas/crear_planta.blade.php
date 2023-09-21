@@ -9,17 +9,17 @@
     <form method="POST" action="{{ route('planta.store')}}">
         @csrf
         <div class="mb-3">
-            <label for="tipo_planta" class="form-label">Tipo de Planta</label>
-            <select name="id_tipo" class="form-control" id="tipo_planta">
-                <option value="">Selecciona un tipo existente</option>
+            <label for="nombre_tipo" class="form-label">Tipo de Planta</label>
+            <select name="nombre_tipo" class="form-control" id="nombre_tipo">
+                <option value="">Selecciona un tipo existente o crea uno nuevo</option>
                 @foreach ($tipos as $tipo)
-                    <option value="{{$tipo->id_tipo}}">{{$tipo->tipo_planta}}</option>
+                    <option value="{{$tipo->nombre_tipo}}">{{$tipo->nombre_tipo}}</option>
                 @endforeach
             </select>
         </div>
         <div class="mb-3">
-            <label for="nuevo_tipo_planta" class="form-label">Nuevo Tipo de Planta</label>
-            <input type="text" name="nuevo_tipo_planta" class="form-control" id="nuevo_tipo_planta">
+            <label for="nuevo_nombre_tipo" class="form-label">Nuevo Tipo de Planta</label>
+            <input type="text" name="nuevo_nombre_tipo" class="form-control" id="nuevo_nombre_tipo">
         </div>
         <div class="mb-3">
             <label for="estado_planta" class="form-label">Estado de Planta</label>
@@ -35,7 +35,7 @@
             <input type="text" name="nombre_planta" required class="form-control" id="nombre" aria-describedby="nombre">
         </div>
         <div class="mb-3">
-            <label for="water" class="form-label">Cantidad de agua</label>
+            <label for="water" class="form-label">Cantidad de agua en ml</label>
             <input type="text" name="cantidad_agua" required class="form-control" id="water" aria-describedby="correo">
         </div>
         <div class="mb-3">

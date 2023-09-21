@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class TipoPlanta extends Model
 {
     //use HasFactory;
-
+    
+    protected $primaryKey = 'id_tipo'; 
     protected $table = "tipo_planta";
     protected $fillable= [
         "id_tipo",
         "tipo_planta"
     ];
-
 
 }

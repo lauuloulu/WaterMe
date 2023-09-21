@@ -9,6 +9,8 @@ class Planta extends Model
 {
     //use HasFactory;
 
+    public $timestamps = false;
+
     protected $table= "planta";
 
     protected $primaryKey= 'id_planta';

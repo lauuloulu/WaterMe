@@ -23,6 +23,9 @@ Route::get('/persona/crear', [PersonaController::class, 'create'])->name('person
 Route::post('/persona/store', [PersonaController::class, 'store'])->name('persona.store');
 Route::get('/persona/edit/{persona}',[PersonaController::class, 'edit'])->name('persona.edit');
 Route::delete('/persona/delete/{persona}',[PersonaController::class,'delete'])->name('persona.delete');
+Route::put('/persona/update/{persona}', [PersonaController::class, 'update'])->name('persona.update');
+Route::get('/persona/show/{persona}', [PersonaController::class, 'show'])->name('persona.show');
+
 
 //Planta//
 
@@ -31,3 +34,9 @@ Route::get('/planta/crear', [PlantaController::class, 'create'])->name('planta.c
 Route::post('/planta/store',[PlantaController::class, 'store'])->name('planta.store');
 Route::get('planta/edit/{planta}', [PlantaController::class, 'edit'])->name('planta.edit');
 Route::delete('planta/delete/{planta}', [PlantaController::class, 'delete'])->name('planta.delete');
+Route::put('/planta/update/{planta}', [PlantaController::class, 'update'])->name('planta.update');
+Route::get('/planta/show/{planta}', [PlantaController::class, 'show'])->name('planta.show');
+
+//Registro//
+
+Route::resource('registro_riego', RegistroRiegoController::class);

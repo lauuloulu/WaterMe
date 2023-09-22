@@ -58,7 +58,9 @@ class PlantaController extends Controller
         return redirect()->route('planta.index_planta');
     }
     public function edit(Planta $planta){
-        return view('usuario.plantas.editar_planta', compact('planta'));
+        $tipos = TipoPlanta::all(); 
+        $estados = ['Seca','Sana','Floreciendo','Brotando','Con manchas','Pocha','Muerta'];
+        return view('usuario.plantas.editar_planta', compact('planta', 'tipos', 'estados'));
     }
 
     public function update(Request $request, Planta $planta){
@@ -66,12 +68,19 @@ class PlantaController extends Controller
             'nombre_planta' => $request->nombre_planta,
             'estado'=>$request->estado,
             'cantidad_agua'=>$request->cantidad_agua,
-            'cantidad_agua'=>$request->cantidad_agua,
+            'riego'=>$request->riego,
         ]);
         return redirect()->route('planta.index_planta');
     }
 
-public function delete(Planta $planta){
+    public function show(Planta $planta)
+    {
+        $nombre_tipo = TipoPlanta::find($planta->id_tipo)->nombre_tipo;
+        return view('usuario.plantas.show_planta', compact('planta', 'nombre_tipo'));
+    }
+
+public function delete(Request $request, Planta $planta)
+{
     $planta->delete();
     return redirect()->route('planta.index_planta');
 }

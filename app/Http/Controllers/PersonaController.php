@@ -25,12 +25,33 @@ class PersonaController extends Controller
             'correo'=>$request->correo,
             'contraseña'=>$request->contraseña,
         ]);
-        return redirect()->route('usuario.index');
+        return redirect()->route('usuario.persona.index_persona');
     }
 
     public function edit(Persona $persona){
-        return view('usuario.plantas.editar_persona', compact ('persona'));
+        return view('usuario.persona.editar_persona', compact ('persona'));
     }
 
+    public function update(Request $request, Persona $persona)
+    {
+        $persona->update([
+            'nombre_persona' => $request->nombre_persona,
+            'apellidos' => $request->apellidos,
+            'correo' => $request->correo,
+            'contraseña' => $request->contraseña,
+        ]);
+        return redirect()->route('usuario.persona.index_persona');
+    }
+
+    public function show(Persona $persona)
+    {
+        return view('usuario.persona.show_persona', compact('persona'));
+    }
+
+    public function delete(Request $request, Persona $persona)
+    {
+        $persona->delete();
+        return redirect()->route('usuario.persona.index_persona');
+    }
 
 }

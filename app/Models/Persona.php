@@ -19,4 +19,9 @@ protected $fillable= [
     "contraseña"
 ];
 
+public function plantas()
+{
+    return $this->belongsToMany(Planta::class, 'planta_persona', 'id_persona', 'id_planta');
+}
+
 }

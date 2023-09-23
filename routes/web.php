@@ -39,4 +39,11 @@ Route::get('/planta/show/{planta}', [PlantaController::class, 'show'])->name('pl
 
 //Registro//
 
-Route::resource('registro_riego', RegistroRiegoController::class);
+Route::get('/registro', [RegistroRiegoController::class, 'index'])->name('registro.index_registro');
+Route::get('/registro/crear', [RegistroRiegoController::class, 'create'])->name('registro.crear');
+Route::post('/registro/store',[RegistroRiegoController::class, 'store'])->name('registro.store');
+Route::get('registro/edit/{registro}', [RegistroRiegoController::class, 'edit'])->name('registro.edit');
+Route::delete('registro/delete/{registro}', [RegistroRiegoController::class, 'delete'])->name('registro.delete');
+Route::put('/registro/update/{registro}', [RegistroRiegoController::class, 'update'])->name('registro.update');
+Route::get('/registro/show/{registro}', [RegistroRiegoController::class, 'show'])->name('registro.show');
+

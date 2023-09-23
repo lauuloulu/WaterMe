@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class PlantaPersona extends Model
 {
@@ -19,12 +20,14 @@ class PlantaPersona extends Model
         "id_pp"
     ];
 
-public function planta(): BelongTo
+    public $timestamps = false;
+
+public function planta(): BelongsTo
 {
     return $this->belongsTo(Planta::class, "id_planta");
 }
-public function persona(): BelongTo
+public function persona(): BelongsTo
 {
-    return this->belongsTo(Persona::class, "id_persona");
+    return $this->belongsTo(Persona::class, "id_persona");
 }
 };

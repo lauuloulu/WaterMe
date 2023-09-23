@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class RegistroRiego extends Model
 {
     //use HasFactory;
+    public $timestamps = false;
 
     protected $table= "registro_riego";
 
@@ -24,4 +26,14 @@ class RegistroRiego extends Model
     {
         return $this->belongsTo(PlantaPersona::class,"id_pp");
     }
+    
+    public function planta()
+{
+    return $this->belongsTo(Planta::class, 'id_planta');
+}
+
+public function persona()
+{
+    return $this->belongsTo(Persona::class, 'id_persona');
+}
 };

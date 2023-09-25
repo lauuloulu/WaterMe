@@ -9,6 +9,8 @@ use App\Models\RegistroRiego;
 use App\Models\PlantaPersona;
 use App\Models\TipoPlanta;
 use App\Models\Persona;
+use Carbon\Carbon;
+
 
 class RegistroRiegoController extends Controller
 {

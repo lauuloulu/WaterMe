@@ -25,7 +25,7 @@ class PersonaController extends Controller
             'correo'=>$request->correo,
             'contraseña'=>$request->contraseña,
         ]);
-        return redirect()->route('usuario.persona.index_persona');
+        return redirect()->route('persona.index_persona');
     }
 
     public function edit(Persona $persona){
@@ -40,7 +40,7 @@ class PersonaController extends Controller
             'correo' => $request->correo,
             'contraseña' => $request->contraseña,
         ]);
-        return redirect()->route('usuario.persona.index_persona');
+        return redirect()->route('persona.index_persona');
     }
 
     public function show(Persona $persona)
@@ -51,7 +51,7 @@ class PersonaController extends Controller
     public function delete(Request $request, Persona $persona)
     {
         $persona->delete();
-        return redirect()->route('usuario.persona.index_persona');
+        return redirect()->route('persona.index_persona');
     }
 
 }

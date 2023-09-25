@@ -6,10 +6,11 @@
 <ul>
     <li><strong>Tipo de Planta:</strong> {{ $nombre_tipo }}</li>
     <li><strong>Estado:</strong> {{ $planta->estado }}</li>
-    <li><strong>Cantidad de Agua en ml:</strong> {{ $planta->cantidad_agua }}</li>
-    <li><strong>Riego en días:</strong> {{ $planta->riego }}</li>
+    <li><strong>Cantidad de Agua:</strong> {{ $planta->cantidad_agua }} ml</li>
+    <li><strong>Riego:</strong> Cada {{ $diasEntreRiegos }} días</li>
 </ul>
 
+<a class="btn custom-btn" href="{{ route('planta.edit', ['planta'=> $planta->id_planta])}}">Editar</a>
 <a class="btn custom-btn" href="{{ route('planta.index_planta')}}">Volver a plantas</a>
 
 

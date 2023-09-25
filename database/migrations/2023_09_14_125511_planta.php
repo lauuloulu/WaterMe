@@ -18,7 +18,7 @@ return new class extends Migration
             $table->enum('estado', ['Seca','Sana','Floreciendo','Brotando','Con manchas','Pocha','Muerta']);
             $table->string('nombre_planta');
             $table->string('cantidad_agua');
-            $table->decimal('riego');
+            $table->integer('riego');
         });
     }
 

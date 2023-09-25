@@ -45,8 +45,8 @@
             <input type="text" name="cantidad_agua" value="{{ $planta->cantidad_agua }}" required class="form-control" id="water" aria-describedby="correo">
         </div>
         <div class="mb-3">
-            <label for="days" class="form-label">Riego en días</label>
-            <input type="text" name="riego" value="{{ $planta->riego }}" required class="form-control" id="days" aria-describedby="correo">
+            <label for="riego" class="form-label">Riego en días</label>
+            <input type="number" name="riego" required class="form-control" id="riego" aria-describedby="riego" value="{{ old('riego', $planta->riego) }}">
         </div>
         <button type="submit" class="btn custom-btn">Guardar</button>
     </form>

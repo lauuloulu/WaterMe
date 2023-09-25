@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('planta_persona', function (Blueprint $table) {
             $table->unsignedBigInteger('id_planta');
-            $table->foreign('id_planta')->references('id_planta')->on('planta');
+            $table->foreign('id_planta')->references('id_planta')->on('planta')->onDelete('cascade');
             $table->unsignedBigInteger('id_persona');
-            $table->foreign('id_persona')->references('id_persona')->on('persona');
+            $table->foreign('id_persona')->references('id_persona')->on('persona')->onDelete('cascade');
             $table->id('id_pp');
 
 

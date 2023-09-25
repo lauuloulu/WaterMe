@@ -10,7 +10,7 @@
 
 @foreach ($registros as $registro)
     @php
-        $nextWateringDate = $registro->fecha_registro->addDays($registro->planta_persona->planta->riego);
+        $nextWateringDate = Carbon\Carbon::parse($registro->planta_persona->planta->riego)->addDays($registro->planta_persona->planta->riego);
     @endphp
 
     <x-plant-water-countdown :plantName="$registro->planta_persona->planta->nombre_planta" :nextWateringDate="$nextWateringDate" />

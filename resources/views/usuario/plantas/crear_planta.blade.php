@@ -40,8 +40,8 @@
         </div>
         <div class="mb-3">
             <label for="days" class="form-label">Riego en días</label>
-            <input type="text" name="riego" required class="form-control" id="days" aria-describedby="correo">
-        </div>
+            <input type="number" name="riego" required class="form-control" id="days" aria-describedby="correo" min="1">
+        </div>        
         <button type="submit" class="btn custom-btn">Guardar</button>    
     </form>
 </div>

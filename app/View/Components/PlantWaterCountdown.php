@@ -11,11 +11,13 @@ class PlantWaterCountdown extends Component
     public $plantName;
     public $daysLeft; 
     public $plantImage;
+    public $editRoute;
     
-    public function __construct($plantName, $nextWateringDate, $plantImage)
+    public function __construct($plantName, $nextWateringDate, $plantImage, $editRoute)
     {
         $this->plantName = $plantName;
         $this->plantImage = $plantImage;
+        $this->registro = $editRoute;
 
         $today = Carbon::now();
         $nextWatering = Carbon::parse($nextWateringDate);

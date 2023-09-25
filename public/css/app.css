@@ -1,0 +1,104 @@
+/*GENERAL*/
+
+body{
+    background-color: #D7C4B2;
+}
+
+
+/*Index*/
+
+.tarjeta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right:20px;
+
+}
+
+.tarjeta img{
+    border-radius: 50%;
+    z-index: 1;
+    border: 5px solid #F5F1EF;
+    position: relative;
+    
+}
+
+.infoplanta,
+.inforiego{
+    display: flex;
+    align-items: center;
+    background-color: #F5F1EF;
+    width: 50%;
+    z-index: 0;
+    position: relative;
+    padding-left: 10px;
+}
+
+/*NAVBAR*/
+
+.navbar-custom{
+    background-color:#F5F1EF;
+}
+
+
+/*BOTONES*/
+
+.custom-btn {
+    background-color:#F5F1EF;
+    color: black;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 10px;;
+}
+
+.custom-btn:hover {
+    background-color: #B19A70;
+    color: white;
+    border-color: #B19A70;
+    margin-bottom: 20px;
+}
+
+.btn-primary{
+    background-color: #B19A70;
+    color: white;
+    border-color: #B19A70;
+}
+
+.btn-primary:hover{
+    background-color:#F5F1EF;
+    color: black;
+    border-color: #F5F1EF;
+}
+
+/*PERSONA*/
+
+.personalista{
+    list-style: none; 
+    padding: 0; 
+    margin: 0;
+}
+
+.personalista li{
+    margin-top:10px;
+    margin-bottom: 10px; 
+    margin-left: 10px;
+}
+
+.personalista li a{
+    
+    text-decoration: none; 
+    color: #333;
+    font-size: 20px;
+}
+
+.personalista li form input[type="submit"]{
+    margin-top: 5px;;
+    background-color: #dc3545; 
+    color: #fff; 
+    border: none; 
+    padding: 5px 10px; 
+    cursor: pointer;
+}

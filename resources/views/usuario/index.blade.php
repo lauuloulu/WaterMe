@@ -2,27 +2,21 @@
 
 @section('title', 'Índice')
     
-
-
 @section('content')
-
-<h1>Hello world! Esto es el usuario.index</h1>
 
 @foreach ($registros as $registro)
     @php
         $nextWateringDate = Carbon\Carbon::parse($registro->planta_persona->planta->riego)->addDays($registro->planta_persona->planta->riego);
-
     @endphp
 
     <x-plant-water-countdown 
        :plantImage="asset('storage/' . $registro->planta_persona->planta->imagen)"
        :plantName="$registro->planta_persona->planta->nombre_planta" 
-       :nextWateringDate="$nextWateringDate" />
+       :nextWateringDate="$nextWateringDate"
+       :registro="$registro"
+       :editRoute=" route('registro.edit', ['registro' => $registro->id_registro]) " />
+
+    <a href="{{ route('registro.edit', ['registro' => $registro]) }}" class="btn btn-primary">Actualizar riego</a><br>
 @endforeach
-
-<a class="btn custom-btn" href="{{ route('persona.index_persona')}}">Usuario</a>
-<a class="btn custom-btn" href="{{ route('planta.index_planta')}}">Planta</a>
-<a class="btn custom-btn" href="{{ route('registro.index_registro')}}">Riego</a>
-
 
 @endsection

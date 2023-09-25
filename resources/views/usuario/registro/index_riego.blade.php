@@ -4,9 +4,8 @@
 
 @section('content')
 
-<a href="{{route('registro.crear')}}">Crear nuevo registro de riego</a>
 
-<ul>
+<ul class="personalista">
     @forelse ($registros as $registro )
     <li>
         Planta: {{ $registro->planta_persona->planta->nombre_planta }} |
@@ -28,3 +27,7 @@
 </ul>
 
 <a class="btn custom-btn" href="{{ route('usuario.index')}}">Índice</a>
+<a href="{{route('registro.crear')}}" class="btn custom-btn">Crear nuevo registro de riego</a>
+
+
+@endsection

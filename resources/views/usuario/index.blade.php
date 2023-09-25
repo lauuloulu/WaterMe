@@ -11,9 +11,13 @@
 @foreach ($registros as $registro)
     @php
         $nextWateringDate = Carbon\Carbon::parse($registro->planta_persona->planta->riego)->addDays($registro->planta_persona->planta->riego);
+
     @endphp
 
-    <x-plant-water-countdown :plantName="$registro->planta_persona->planta->nombre_planta" :nextWateringDate="$nextWateringDate" />
+    <x-plant-water-countdown 
+       :plantImage="asset('storage/' . $registro->planta_persona->planta->imagen)"
+       :plantName="$registro->planta_persona->planta->nombre_planta" 
+       :nextWateringDate="$nextWateringDate" />
 @endforeach
 
 <a class="btn custom-btn" href="{{ route('persona.index_persona')}}">Usuario</a>

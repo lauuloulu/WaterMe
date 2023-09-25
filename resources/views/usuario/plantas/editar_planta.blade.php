@@ -6,7 +6,7 @@
 
 <div class="formulario">
     <h1>Editar planta</h1>
-    <form method="POST" action="{{ route('planta.update', ['planta' => $planta->id_planta]) }}">
+    <form method="POST" action="{{ route('planta.update', ['planta' => $planta->id_planta]) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT') 
 
@@ -47,6 +47,10 @@
         <div class="mb-3">
             <label for="riego" class="form-label">Riego en días</label>
             <input type="number" name="riego" required class="form-control" id="riego" aria-describedby="riego" value="{{ old('riego', $planta->riego) }}">
+        </div>
+        <div class="mb-3">
+            <label for="imagen" class="form-label">Imagen de planta</label>
+            <input type="file" name="imagen" class="form-control" id="imagen">
         </div>
         <button type="submit" class="btn custom-btn">Guardar</button>
     </form>

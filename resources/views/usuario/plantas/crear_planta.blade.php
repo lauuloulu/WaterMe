@@ -6,7 +6,7 @@
 
 <div class="formulario">
     <h1>Nueva planta</h1>
-    <form method="POST" action="{{ route('planta.store')}}">
+    <form method="POST" action="{{ route('planta.store')}}" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="nombre_tipo" class="form-label">Tipo de Planta</label>
@@ -41,7 +41,11 @@
         <div class="mb-3">
             <label for="days" class="form-label">Riego en días</label>
             <input type="number" name="riego" required class="form-control" id="days" aria-describedby="correo" min="1">
-        </div>        
+        </div> 
+        <div class="mb-3">
+            <label for="imagen" class="form-label">Imagen de planta</label>
+            <input type="file" name="imagen" class="form-control" id="imagen">
+        </div>       
         <button type="submit" class="btn custom-btn">Guardar</button>    
     </form>
 </div>

@@ -18,7 +18,9 @@ class Planta extends Model
         "estado",
         "nombre_planta",
         "cantidad_agua",
-        "riego"
+        "riego",
+        "imagen",
+        
     ];
 
 public function tipo_planta(): BelongsTo

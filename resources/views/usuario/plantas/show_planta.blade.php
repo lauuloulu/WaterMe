@@ -3,6 +3,9 @@
 @section('content')
 
 <h1>{{ $planta->nombre_planta }}</h1>
+@if ($planta->imagen)
+    <img src="{{ asset('storage/' . $planta->imagen) }}" alt="{{ $planta->nombre_planta }}">
+@endif
 <ul>
     <li><strong>Tipo de Planta:</strong> {{ $nombre_tipo }}</li>
     <li><strong>Estado:</strong> {{ $planta->estado }}</li>

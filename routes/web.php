@@ -6,15 +6,16 @@ use App\Http\Controllers\PlantaController;
 use App\Http\Controllers\PlantaPersonaController;
 use App\Http\Controllers\RegistroRiegoController;
 use App\Http\Controllers\TipoPlantaController;
+use App\Models\RegistroRiego;
 
 
 Route::get('/', function () {
-    return view('usuario.index');
+    $registros = RegistroRiego::all();
+
+    return view('usuario.index', compact('registros'));
 })->name('usuario.index');
 
-/*Route::get('usuario/index', function () {
-    return view('usuario.index');
-});*/
+
 
 //Persona//
 

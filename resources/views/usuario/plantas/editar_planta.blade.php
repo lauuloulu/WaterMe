@@ -8,7 +8,7 @@
     <h1>Editar planta</h1>
     <form method="POST" action="{{ route('planta.update', ['planta' => $planta->id_planta]) }}">
         @csrf
-        @method('PUT') <!-- Agregar el campo oculto _method para indicar una actualización -->
+        @method('PUT') 
 
         <div class="mb-3">
             <label for="nombre_tipo" class="form-label">Tipo de Planta</label>

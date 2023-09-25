@@ -52,7 +52,9 @@ class RegistroRiegoController extends Controller
 }
 
     public function edit(RegistroRiego $registro){
-        return view('usuario.registro.editar_registro', compact ('registro'));
+        $personas = Persona::all();
+        $plantas = Planta::all();
+        return view('usuario.registro.editar_riego', compact ('registro', 'personas','plantas'));
     }
 
     public function update(Request $request, RegistroRiego $registro)
@@ -61,17 +63,21 @@ class RegistroRiegoController extends Controller
             'fecha_registro'=>$request->fecha_registro,
             'nota_registro'=>$request->nota_registro,
         ]);
-        return redirect()->route('usuario.registro.index_riego');
+         $registro->planta_persona->update([
+        'id_planta' => $request->id_planta,
+        'id_persona' => $request->id_persona,
+    ]);
+        return redirect()->route('registro.index_registro');
     }
 
     public function show(RegistroRiego $registro)
     {
-        return view('usuario.registro.show_registro', compact('registro'));
+        return view('usuario.registro.show_riego', compact('registro'));
     }
 
     public function delete(Request $request, RegistroRiego $registro)
     {
         $registro->delete();
-        return redirect()->route('usuario.registro.index_riego');
+        return redirect()->route('registro.index_registro');
     }
 }

@@ -14,11 +14,13 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/app.js') }}" defer></script>
     
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
-        <a class="navbar-brand" href="#">Water Me; Happy Plants!</a>
+      <img class="logo" href="{{ route('usuario.index')}}"  src="{{ asset('storage/logo/logo-circulo.png') }}" alt="logo"  width="50px" height="50px">
+        <a class="navbar-brand" href="{{ route('usuario.index')}}">Water Me; Happy Plants!</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -33,11 +35,22 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('registro.index_registro')}}">Riego</a>
               </li>
-            
           </ul>
+  
+
         </div>
       </nav>
     
     @yield('content')
+
+    <footer>
+      <div class="footer-container">
+              <div class="col-md-6 text-right">
+                  <hr>
+                  <p class="copyright">&copy; {{ date('Y') }} Water me; happy plants!  Todos los derechos reservados.</p>
+              </div>
+      </div>
+  </footer>
 </body>
+
 </html>

@@ -26,7 +26,7 @@
     </div>
 
     <div class="inforiego">
-      <p>Días hasta el próximo riego: {{ $daysLeft }}</p> 
+      <p>Próximo riego: {{ $daysLeft }}</p> 
     </div>
     
 </div>
